@@ -3,9 +3,9 @@ title: "Kahn's Algorithm"
 date: 2022-08-28
 ---
 
-```
-#include <bits/stdc++.h>
-using namespace std;
+> ```
+> #include <bits/stdc++.h>
+> using namespace std;
 
 #define MEM(a, b) memset(a, (b), sizeof(a))
 #define REP(Q) for(int _ = 0; _ < Q; _++)
