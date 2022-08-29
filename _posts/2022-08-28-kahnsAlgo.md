@@ -24,7 +24,7 @@ typedef vector<pi> vii;
 typedef set<int> seti;
 typedef long long ll;
 
-const int MM = 6; //Max # of nodes
+const int MM = 7; //Max # of nodes + 1
 vi adj[MM]; //Adjacency list
 int in[MM]; //In degree of node
 
