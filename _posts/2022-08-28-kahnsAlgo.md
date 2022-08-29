@@ -61,3 +61,6 @@ int main(){
     return 0;
 }
 ```
+
+Practice Problems:
+- [Death Gun](https://dmoj.ca/problem/deathgun)
