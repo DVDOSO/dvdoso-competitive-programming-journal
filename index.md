@@ -1,3 +1,3 @@
 ---
-title: "Competitive Programming Journal"
+title: "Home"
 ---
