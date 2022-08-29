@@ -1,0 +1,3 @@
+---
+title: "Competitive Programming Journal"
+---
