@@ -1,5 +1,5 @@
 ---
-title: "Breadth First Search (BFS)"
+title: "Binary Search"
 date: 2022-08-29
 ---
 
