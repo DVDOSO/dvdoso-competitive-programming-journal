@@ -53,6 +53,7 @@ int main(){
 }
 ```
 
+### Output
 ```
 0 is Not Prime
 1 is Not Prime
