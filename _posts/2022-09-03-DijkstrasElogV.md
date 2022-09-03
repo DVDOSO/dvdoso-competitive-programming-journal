@@ -65,3 +65,6 @@ int main(){
     return 0;
 }
 ```
+
+Practice Problems:
+- [Single Source Shortest Path](https://dmoj.ca/problem/sssp)
