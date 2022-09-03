@@ -1,5 +1,5 @@
 ---
-title: "Dijkstra's Algorithm O(V<sup>2</sup>) Implementation"
+title: "Dijkstra's Algorithm O(V^2) Implementation"
 date: 2022-09-03
 ---
 
