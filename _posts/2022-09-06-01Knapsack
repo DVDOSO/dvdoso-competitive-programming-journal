@@ -1,0 +1,53 @@
+---
+title: "0-1 Knapsack Problem"
+date: 2022-09-06
+---
+
+'''
+#include <bits/stdc++.h>
+using namespace std;
+
+#define MEM(a, b) memset(a, (b), sizeof(a))
+#define REP(Q) for(int _ = 0; _ < Q; _++)
+#define all(cont) cont.begin(), cont.end()
+#define rall(cont) cont.end(), cont.begin()
+#define pb push_back
+#define ppb pop_back
+#define pf push_front
+#define ppf pop_front
+#define F first
+#define S second
+typedef pair<int, int> pi;
+typedef vector<int> vi;
+typedef vector<string> vs;
+typedef vector<pi> vii;
+typedef set<int> seti;
+typedef long long ll;
+
+const int MN = 103, MW = 1e5+5;
+ll n, w, c[MN], v[MN], dp[MW];
+
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    
+    cin >> n >> w;
+    for(int i = 1; i <= n; i++){
+        cin >> c[i] >> v[i];
+    }
+
+    for(int i = 1; i <= n; i++){
+        for(int j = w; j > 0; j--){
+            if(c[i] > j) continue;
+            dp[j] = max(dp[j], dp[j-c[i]] + v[i]);
+        }
+    }
+
+    cout << dp[w] << '\n';
+
+    return 0;
+}
+'''
+
+Practice Problems:
+- (DMOPC '14 Contest 3 P6 - Not Enough Time!)[https://dmoj.ca/problem/dmopc14c3p6]
