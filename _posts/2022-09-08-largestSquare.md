@@ -48,13 +48,17 @@ int main(){
         }
     }
 
+    //ans is the dimension of the square
+
     for(int i = 1; i <= n; i++){
         for(int j = 1; j <= n; j++){
             if(dp[i][j] == ans) cnt++;
         }
     }
 
-    cout << ans*cnt << '\n';
+    //cnt is the # of such squares that can be made
+
+    cout << ans << ' ' << cnt << '\n';
 
     return 0;
 }
