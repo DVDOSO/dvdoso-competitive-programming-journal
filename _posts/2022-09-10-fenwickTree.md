@@ -1,6 +1,6 @@
 ---
 title: "Fenwick Tree (Binary Indexed Tree)"
-date: 2022-09-10"
+date: 2022-09-10
 ---
 
 ```
