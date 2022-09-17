@@ -4,7 +4,7 @@ date: 2022-09-10
 ---
 
 ### Sample Problem:  
-You are given an array A with n cells.  
+You are given an array "a" with n cells.  
 You must support two operations: 
 ```
 update(x, i)    a[i] += x  
