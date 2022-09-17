@@ -5,35 +5,46 @@ date: 2022-09-10
 
 ### Sample Problem:  
 You are given an array A with n cells.  
-You must support two operations:  
-update(x, i) a[i] += x  
-query(x) a[1] + a[2] + ... a[x]  
+You must support two operations: 
+```
+update(x, i)    a[i] += x  
+query(x)        a[1] + a[2] + ... a[x]  
+```
   
 If we use a regular array,  
-update(x, i) O(1)  
-query(x) O(n)  
+```
+update(x, i)    O(1)  
+query(x)        O(n)  
+```
   
-If we use a prefix sum array,  
-update(x, i) O(n)  
-query(x) O(1)  
+If we use a prefix sum array, 
+```
+update(x, i)    O(n)  
+query(x)        O(1)  
+```
   
 If we use a Fenwick tree,  
-update(x, i) O(logn)  
-query(x) O(logn)  
+```
+update(x, i)    O(logn)  
+query(x)        O(logn)  
+```
   
 Best of both worlds!  
   
 ### Storage  
 We store the Fenwick tree inside of an array of size N  
   
-bit[1] = a[1]                       (1) Binary value of i  
+```
+bit[1] = a[1]                       (1)   Binary value of i  
 bit[2] = a[1] + a[2]                (10)  
 bit[3] = a[3]                       (11)  
 bit[4] = a[1] + a[2] + a[3] + a[4]  (100)  
 bit[5] = a[5]                       (101)  
 bit[6] = a[5] + a[6]                (110)  
 bit[7] = a[7]                       (111)  
-bit[8] = a[1] + a[2] + a[3] + a[4]+ a[5] + a[6] + a[7] + a[8] (1000)  
+bit[8] = a[1] + a[2] + a[3] + a[4] 
+       + a[5] + a[6] + a[7] + a[8]  (1000)  
+```
   
 Every cell[i] stores the sum of the last r values where r is the value of the last bit 1 in i's binary  
   
@@ -42,20 +53,24 @@ To get last bit 1: use two's complement
   
 ### query()  
 We don't need to query every cell   
+```
 query(13) =   
 bit[13] + bit[12] + bit[8] =   
 bit[1101] + bit[1100] + bit[1000]  
+```
   
 Start from the index and remove the last bit 1 every time until index = 0  
   
 ### update()  
 Similar idea to query()  
+```
 update(1, 5)  
 bit[5] += 1     bit[00101]  
 bit[6] += 1     bit[00110]  
 bit[8] += 1     bit[01000]  
 bit[16] += 1    bit[10000]  
 ... until n  
+```
   
 Start from the index and add the last bit 1 every time until index > n  
   
