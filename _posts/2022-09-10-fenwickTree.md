@@ -127,7 +127,74 @@ int main(){
     return 0;
 }
 ```
+
+### Counting Inversions With a Fenwick Tree
+The amount of inversions in an array is the number of cases where `a[i] < a[j]` and `i > j`  
+We can count the number of inversions in an array using a Fenwick tree  
+Use the Fenwick tree like a freqency array  
+
+Loop through every element of the original array. For each element: 
+1. For each element i, `query(maxValue) - query(i)` will give the number of elements strictly greater than it currently in the array
+2. Add `query(maxValue) - query(i)` to the total amount of inversions
+3. `update(1, i)`  
   
+### Sample Code
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+#define MEM(a, b) memset(a, (b), sizeof(a))
+#define REP(Q) for(int _ = 0; _ < Q; _++)
+#define all(cont) cont.begin(), cont.end()
+#define rall(cont) cont.end(), cont.begin()
+#define pb push_back
+#define ppb pop_back
+#define pf push_front
+#define ppf pop_front
+#define F first
+#define S second
+typedef pair<int, int> pi;
+typedef vector<int> vi;
+typedef vector<string> vs;
+typedef vector<pi> vii;
+typedef set<int> seti;
+typedef long long ll;
+
+const int MM = 17; //Max possible number in the array + 1
+ll bit[MM];
+
+void update(int val, int idx){
+    for(int i = idx; i < MM; i+=i&-i){
+        bit[i] += val;
+    }
+}
+
+ll query(int idx){
+    ll ret = 0;
+    for(int i = idx; i > 0; i-=i&-i){
+        ret += bit[i];
+    }
+    return ret;
+}
+
+int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    
+    int a[17] = {0, 8, 3, 7, 10, 15, 13, 16, 4, 2, 6, 1, 11, 5, 12, 9, 14};
+
+    int total = 0;
+    for(int i = 1; i <= 16; i++){
+        total += query(MM-1) - query(a[i]);
+        update(1, a[i]);
+    }
+    
+    cout << "The number of inversions is " << total << '\n'; //55
+
+    return 0;
+}
+```
+
 ### Practice Problems:
 - [Binary Indexed Tree Test](https://dmoj.ca/problem/ds1)
 - [CCC '05 S5 - Pinball Ranking](https://dmoj.ca/problem/ccc05s5)
