@@ -200,3 +200,4 @@ int main(){
 - [CCC '05 S5 - Pinball Ranking](https://dmoj.ca/problem/ccc05s5)
 - [DMOPC '16 Contest 1 P5 - Blood Tubes](https://dmoj.ca/problem/dmopc16c1p5)
 - [DMOPC '18 Contest 4 P4 - Dr. Henri and Lab Data](https://dmoj.ca/problem/dmopc18c4p4)
+- [COCI '08 Regional #6 Cvjetici](https://dmoj.ca/problem/crci08p6)
