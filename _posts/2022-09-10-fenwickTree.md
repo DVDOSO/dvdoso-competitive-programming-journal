@@ -201,3 +201,7 @@ int main(){
 - [DMOPC '16 Contest 1 P5 - Blood Tubes](https://dmoj.ca/problem/dmopc16c1p5)
 - [DMOPC '18 Contest 4 P4 - Dr. Henri and Lab Data](https://dmoj.ca/problem/dmopc18c4p4)
 - [COCI '08 Regional #6 Cvjetici](https://dmoj.ca/problem/crci08p6)
+- [DMOPC '14 Contest 2 P6 - Selective Cutting](https://dmoj.ca/submission/4870870)
+- [DMOPC '19 Contest 3 P3 - Majority](https://dmoj.ca/problem/dmopc19c3p3)
+- [IOI '01 P1 - Mobile Phones](https://dmoj.ca/problem/ioi01p1)
+- [Checkerboard Summation (Hard)](https://dmoj.ca/problem/checkerhard)
