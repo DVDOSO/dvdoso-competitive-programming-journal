@@ -1,4 +1,4 @@
-# dvdoso-competitive-programming-journal
+# DVD_OSO's Competitive Programming Journal
 
 Competitive programming journal covering learned topics, algorithms, and data structures.\
 Includes source code and practice problems.\
